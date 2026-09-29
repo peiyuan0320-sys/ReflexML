@@ -1,0 +1,9 @@
+cff-version: 1.2.0
+message: "If you use this research software, please cite it using this metadata."
+type: software
+title: "ReflexML"
+authors:
+  - family-names: "Ma"
+    given-names: "Peiyuan"
+license: MIT
+abstract: "学习率干预与训练动力学的受控实证研究，保留配对随机未来、精确重放、部分外部复现和显式科研停止决策。"

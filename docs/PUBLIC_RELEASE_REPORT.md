@@ -2,7 +2,7 @@
 
 ## Public-release status
 
-**NOT READY for GitHub publication: license choice and public author metadata remain unconfirmed.** Documentation, source selection, frozen summaries, lightweight tests and local privacy checks have been prepared. No remote operation, upload, new experiment, scientific resampling or inferential recomputation was performed.
+**PUBLIC RELEASE READY — local Chinese public edition prepared; DO NOT PUSH.** MIT License and the public author name Peiyuan Ma were explicitly confirmed. Human final review remains required before publication. Documentation, source selection, frozen summaries, lightweight tests and local privacy checks have been prepared. No remote operation, upload, new experiment, scientific resampling or inferential recomputation was performed.
 
 ## Preservation and Git
 
@@ -14,7 +14,7 @@ The public-release branch is an orphan branch in a separate managed worktree. It
 
 All public files are additions relative to the orphan branch; there is no parent tree to modify. Relative to internal sources, README is rewritten; Markdown paths/navigation and JSON provenance paths are privacy-adapted; selected source defaults replace personal locations with relative excluded-artifact placeholders. Scientific formulas, estimands, seeds, numerical results and intervals are preserved. Nine private-provenance-dependent tests receive explicit skip annotations; their internal originals are untouched.
 
-The inventory is `results/SOURCE_MANIFEST.json`: 67 retained source-bound files with original and public hashes. New authoring consists of README, .gitignore, .gitattributes, docs/EXPERIMENT_DESIGN.md, this report, reproduce/README.md, results/README.md, scripts/validate_release.py, scripts/make_figures.py and three figures. There is no LICENSE or CITATION.cff pending user confirmation. No DOI, coauthor, affiliation or publication venue is invented.
+The inventory is `results/SOURCE_MANIFEST.json`: 67 retained source-bound files with original and public hashes. New authoring consists of README, .gitignore, .gitattributes, docs/EXPERIMENT_DESIGN.md, this report, reproduce/README.md, results/README.md, scripts/validate_release.py, scripts/make_figures.py and three figures. LICENSE contains the standard MIT text with Copyright (c) 2026 Peiyuan Ma. CITATION.cff identifies research software authored by Peiyuan Ma; no version or release date is fabricated. No DOI, coauthor, affiliation or publication venue is invented.
 
 Clean public document names contain the final snapshot, postmortem and global stopping provenance. Supporting frozen protocols remain at their existing root paths to avoid changing imports and discoverability. Earlier audit and protocol continuation language is historical and superseded by the final freeze. The public presentation copies do not replace internal hash-bound originals or certify exact execution portability.
 
@@ -62,16 +62,24 @@ The public text set has no personal absolute paths, credential-pattern hits, ema
 
 Local validation used Python 3.14, torch 2.12.0, torchvision 0.27.0, NumPy 2.4.4, SciPy 1.17.1 and Matplotlib 3.10.9. Existing requirements are lower bounds, not a frozen runtime lock. No dependency installation or new training was necessary. Full scientific reproduction remains unavailable without excluded artifacts and the original environment.
 
-## Remaining publication blockers
+## Chinese public edition finalization
 
-1. Choose a license. MIT is recommended for a small research-code portfolio; Apache-2.0 is another standard option. No legal license was selected without confirmation.
-2. Confirm the preferred public author name before adding CITATION.cff. No name is guessed.
-3. User review before publication; this task deliberately performs no push. Missing raw artifacts are a disclosed reproduction limitation, not a claim of full archival completeness.
+README is now primarily Chinese, explaining the question, design, seven result families, non-claims, stopping rationale, research value, repository map and reproduction limits. Core scientific documents remain in English. Only README and this publication report were modified; LICENSE and CITATION.cff were added. Source code, tests, protocols, numerical summaries, figures and their source manifest remain unchanged in this finalization.
+
+Scientific consistency checks passed for Phase 5A, Phase 5B, LR-switch, Momentum Reset, m=4, MNIST, Wait-d and final novelty. README preserves Phase 5B as INCONCLUSIVE, MNIST as AMBIGUOUS, inherited-momentum insufficiency rather than irrelevance, m=4 as a composite intervention and Wait-d without a timing law. Frozen summaries and source-bound files retain their existing hashes.
+
+The final privacy review scanned tracked public text, including the new metadata, for personal paths/usernames, student identifiers, emails and credential-like values. No such disclosures were found. Words such as token, API key and secret occur in defensive checks or protocol rules; they are not credential values. Peiyuan Ma is the explicitly authorized public author name. README relative links resolve. MIT text and CFF software metadata were checked; no DOI, ORCID, email, institution, coauthor, version or date-released was added.
+
+No unit-test rerun or new experiment was needed for these documentation/metadata-only edits. The existing 117-test result above remains the prior candidate validation, not a newly executed scientific run. Final checks were read-only release validation, Markdown links, unchanged hashes, metadata syntax and privacy checks.
+
+## Remaining blockers
+
+No unresolved content or metadata blockers. **PUBLIC RELEASE READY** for human final review. **DO NOT PUSH**; no remote repository, GitHub description/topics or visibility settings were changed. Full scientific reproduction still requires excluded artifacts, as disclosed above.
 
 Recommended GitHub description (under 160 characters):
 
-> Controlled learning-rate intervention study with paired stochastic futures, exact replay, bounded mechanism tests and explicit novelty-based stopping.
+> 学习率干预与训练动力学的受控实证研究：配对随机未来、精确重放、部分外部复现与显式科研停止决策。
 
-Recommended topics: `machine-learning`, `pytorch`, `learning-rate`, `sgd`, `reproducible-research`, `controlled-experiments`, `negative-results`, `research-portfolio`.
+Recommended topics: `machine-learning`, `pytorch`, `optimization`, `learning-rate`, `sgd`, `reproducible-research`, `experimental-design`, `negative-results`.
 
-Recommended local commit message: `docs: prepare ReflexML public research release`.
+Local finalization commit message: `docs: finalize Chinese public release`.
