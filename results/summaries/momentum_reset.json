@@ -1,0 +1,172 @@
+{
+  "protocol_id": "ReflexML-Momentum-Reset-v1",
+  "protocol_path": "internal-artifacts/MOMENTUM_RESET_PROTOCOL.md",
+  "protocol_sha256": "5f6488f867c5a5663067ef5d5a85aea3aeca295e53260b42b9a21a61dac52f38",
+  "freeze_record_path": "internal-artifacts/MOMENTUM_RESET_PROTOCOL_FREEZE_RECORD.md",
+  "freeze_record_sha256": "8ce90fa4003c60640c622f966a67536412e273e99d6bf2fbd59ccb6ad57e3992",
+  "production_manifest_path": "internal-artifacts/momentum_reset_completion_manifest.json",
+  "production_manifest_sha256": "69260f4fbad9b2db434520949edb2ab1a6464fdc1e0eeaf1d6e554a15b521efa",
+  "historical_keep_authority": {
+    "primary_analysis_path": "internal-artifacts/primary_analysis.json",
+    "primary_analysis_sha256": "9b7d8a940c3b62590cad1793070c523ddb0c06c8592d2abe4d7c84378454e791",
+    "stage_i_gate_path": "internal-artifacts/stage_i_gate.json",
+    "stage_i_gate_sha256": "dd7d4273a215f1c71cdf816bce3334dc846c37e31b92f0e29e46b7748d67dc80",
+    "stage_ii_manifest_path": "internal-artifacts/stage_ii_completion_manifest.json",
+    "stage_ii_manifest_sha256": "b4db6b50f176c556ec6ec31182831bbe2a308f174dca499bb44e1503c0e5d473"
+  },
+  "integrity": {
+    "production_branch_count": 144,
+    "scientifically_valid": 144,
+    "primary_evaluable": 144,
+    "primary_non_evaluable": 0,
+    "technical_invalid_attempts": 0,
+    "retries": 0,
+    "unresolved_branches": 0,
+    "unauthorized_branches": 0,
+    "keep_reruns": 0,
+    "all_record_file_sha256_verified": true,
+    "four_cell_identity_and_order_verified": true
+  },
+  "N": 36,
+  "K": 2,
+  "state_ids": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36
+  ],
+  "replicas": [
+    "A1",
+    "A2"
+  ],
+  "primary_outcome": "epoch18 validation loss",
+  "estimand_definitions": {
+    "Delta_K": "L_10K - L_05K",
+    "Delta_R": "L_10R - L_05R",
+    "I": "Delta_K - Delta_R",
+    "R_.10": "L_10K - L_10R",
+    "R_.05": "L_05K - L_05R"
+  },
+  "aggregation": "paired contrast per replica, A1/A2 mean within state, mean of 36 states",
+  "bootstrap": {
+    "method": "state-level percentile",
+    "B": 10000,
+    "rng": "numpy.random.Generator(PCG64)",
+    "seed": 6630267477959695398,
+    "quantiles": [
+      0.025,
+      0.975
+    ],
+    "same_state_indices_for_all_five_estimands": true
+  },
+  "estimates": {
+    "Delta_K": {
+      "point_estimate": 0.04110032269702188,
+      "ci_95": [
+        0.033806524633044996,
+        0.048786007891713314
+      ]
+    },
+    "Delta_R": {
+      "point_estimate": 0.044404765195026986,
+      "ci_95": [
+        0.03713075117724119,
+        0.052416257122717774
+      ]
+    },
+    "I": {
+      "point_estimate": -0.003304442498005098,
+      "ci_95": [
+        -0.008549983271135838,
+        0.0018922622160199621
+      ]
+    },
+    "R_.10": {
+      "point_estimate": -0.003718549992599419,
+      "ci_95": [
+        -0.008759466992030951,
+        0.0012414761516876098
+      ]
+    },
+    "R_.05": {
+      "point_estimate": -0.0004141074945943215,
+      "ci_95": [
+        -0.0016972298737760207,
+        0.0008226993274088528
+      ]
+    }
+  },
+  "identity_check": {
+    "max_abs_unit_residual": 0.0,
+    "aggregate_residual_I_minus_R10_minus_R05": -4.336808689942018e-19,
+    "passed": true
+  },
+  "historical_keep_integrity": {
+    "passed": true,
+    "reconstructed_point_estimate": 0.04110032269702188,
+    "historical_point_estimate": 0.04110032269702188,
+    "point_residual": 0.0,
+    "reconstructed_original_ci_95": [
+      0.03384703125702321,
+      0.048712969436194326
+    ],
+    "historical_original_ci_95": [
+      0.033847031257023194,
+      0.04871296943619432
+    ],
+    "ci_residual": [
+      1.3877787807814457e-17,
+      6.938893903907228e-18
+    ]
+  },
+  "frozen_primary_conclusion": {
+    "interaction_case": "C",
+    "effect_modification": "Inherited-momentum modification of the LR effect is not established with this experiment.",
+    "reset_lr_advantage": "The immediate LR=.05 validation-loss advantage persists after inherited S17 momentum has been removed. Inherited S17 momentum cannot by itself explain the immediate LR effect.",
+    "simple_effect_pattern": "R_.10 = -0.0037185499925994191: Reset raises mean epoch18 validation loss at this LR. R_.05 = -0.00041410749459432148: Reset raises mean epoch18 validation loss at this LR."
+  },
+  "explicit_non_claims": [
+    "No unique bad momentum mechanism established",
+    "No gradient-momentum misalignment, buffer magnitude, overshoot, sharpness/Hessian, deterministic or stochastic finite-step mechanism established",
+    "No mediation percentage, reconvergence, external generality, or novelty established"
+  ],
+  "scope": {
+    "secondary_outcomes_analyzed": false,
+    "estimands_changed": false,
+    "bootstrap_changed": false,
+    "post_hoc_margin_used": false,
+    "keep_rerun_performed": false
+  }
+}

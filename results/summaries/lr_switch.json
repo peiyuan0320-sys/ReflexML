@@ -1,0 +1,59 @@
+{
+  "protocol_id": "ReflexML-Mechanism-LR-Switch-v1",
+  "protocol_path": "internal-artifacts/MECHANISM_LR_SWITCH_PROTOCOL.md",
+  "protocol_sha256": "2c5d58f45c5db454eb091023201a40d49cf0b75fd783c9a826a596fe8c217f48",
+  "stage_i_gate_path": "internal-artifacts/stage_i_gate.json",
+  "stage_i_gate_sha256": "dd7d4273a215f1c71cdf816bce3334dc846c37e31b92f0e29e46b7748d67dc80",
+  "stage_ii_manifest_path": "internal-artifacts/stage_ii_completion_manifest.json",
+  "stage_ii_manifest_sha256": "b4db6b50f176c556ec6ec31182831bbe2a308f174dca499bb44e1503c0e5d473",
+  "implementation_path": "internal-artifacts/mechanism_lr_switch.py",
+  "implementation_sha256": "f05c0d3502f09e12f24ccb43ad39b092768a985748b5f684db58dd034f34ace0",
+  "integrity": {
+    "status": "PASS",
+    "states": 36,
+    "replicas_per_state": 2,
+    "switch_records": 72,
+    "continue_records": 72,
+    "exact_identity_pairing": true,
+    "paired_future_streams": true,
+    "switch_epoch18_learning_rate": 0.05,
+    "continue_epoch18_learning_rate": 0.1
+  },
+  "N": 36,
+  "K": 2,
+  "delta_switch": 0.04110032269702188,
+  "D": 0.04584928999013371,
+  "kappa_C": 0.004748967293111818,
+  "ci_95": {
+    "delta_switch": [
+      0.033847031257023194,
+      0.04871296943619432
+    ],
+    "D": [
+      0.036812896945766276,
+      0.05627296271870325
+    ],
+    "kappa_C": [
+      -0.007571413025207204,
+      0.016896603213218557
+    ]
+  },
+  "decomposition": {
+    "identity": "D = kappa_C + delta_switch",
+    "residual": 1.3877787807814457e-17,
+    "absolute_tolerance": 2e-16,
+    "passed": true
+  },
+  "bootstrap": {
+    "method": "state_level_percentile",
+    "resampling_unit": "state",
+    "replicas_retained_within_state": true,
+    "B": 10000,
+    "rng": "numpy.random.Generator(PCG64)",
+    "seed": 12114954806208443255,
+    "quantiles": [
+      0.025,
+      0.975
+    ]
+  }
+}

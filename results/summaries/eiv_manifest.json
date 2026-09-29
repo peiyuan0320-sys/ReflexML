@@ -1,0 +1,12 @@
+{
+  "analysis_script_sha256": "6e49f34470889743f1c44dec576d989f066a117875967ed2ef71a6c5c9e734a0",
+  "numpy_version": "2.4.4",
+  "protocol_id": "Post-Phase5-EIV-v3.1",
+  "protocol_sha256": "91cac4d95bf8d4606ef2c790efc22724d4723db6be413ecf2c147beeaad7369b",
+  "python_version": "3.14.3",
+  "replica_input_path": "internal-artifacts/phase5_replica_estimates.csv",
+  "replica_input_sha256": "1868b85cf9ac9f8ac6c158a8af7fa057f92a46ad492bf6a30942b098cace34d1",
+  "scipy_version": "1.17.1",
+  "state_input_path": "internal-artifacts/phase5_state_estimates.csv",
+  "state_input_sha256": "d119d62176a780fe683ea7b38c630a21a4f0121e350420e7372fd536b1f0a056"
+}

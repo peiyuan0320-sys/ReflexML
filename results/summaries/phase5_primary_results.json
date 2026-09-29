@@ -1,0 +1,143 @@
+{
+  "status": "PHASE5_PRIMARY_ANALYSIS_COMPLETE",
+  "protocol_version": "Phase5-v1",
+  "protocol_sha256": "8eff292a2e5027bec893d6cf43e327f961ae91bf390d9ed28a65a996a0799352",
+  "source": {
+    "ledger_path": "internal-artifacts/branch-036-B-r10-c67a50b3660143afb1ba20fd68c5f5f3.json",
+    "ledger_sha256": "9382e1a737a96024ffb77d73344a309dc8e540b71491f2d4062e690962fcc634",
+    "ledger_event_count": 2700,
+    "ledger_final_event_version": 2700,
+    "ledger_final_head": "3222eb22d21b2b0bb81aa9062e5444be8c038ffacdf4000dd0639504f45639ab",
+    "successful_attempts": 900,
+    "artifact_paths_unique": 900,
+    "future_seeds_unique": 900,
+    "future_stream_identities_unique": 900,
+    "primary_checkpoint_hashes_unique": 36,
+    "checkpoint_snapshot_identity": "1f753ded5a8f7b4cb810a55ec21f81903c0b1f948a49f4d56bd3780e8062d863",
+    "counts_by_block": {
+      "A": 540,
+      "B": 360
+    }
+  },
+  "input_validation": {
+    "artifact_hashes_verified": 900,
+    "A_outcome_rows": 2160,
+    "B_final_outcome_rows": 2160,
+    "N_states": 36,
+    "K_A": 15,
+    "K_B": 10,
+    "A_artifacts": 540,
+    "B_artifacts": 360,
+    "duplicate_assignments": 0,
+    "missing_required_outcome_rows": 0,
+    "nonfinite_primary_quantities": 0
+  },
+  "definitions": {
+    "primary_state": "one outcome-independent epoch-14 checkpoint per base_run_id 1..36",
+    "deltaL_h": "A only: validation loss Wait(epoch 14+h) - Now(epoch 14+h), h=1..4",
+    "R": "A only: (deltaL1 + deltaL2 + deltaL3)/3 per replica",
+    "rho_hat_s": "mean of 15 A-replica R values within state",
+    "mu_rho": "mean of 36 rho_hat_s values",
+    "A34": "mean across states of within-state A-replica mean(deltaL4 - deltaL3)",
+    "G": "B only: [mean(Wait val loss at epochs 28,29,30) - mean(Now val loss at epochs 28,29,30)] / max(mean(Wait val loss at epochs 28,29,30),1e-12) per replica",
+    "tau_hat_s": "mean of 10 B-replica G values within state",
+    "psi_primary": "sample covariance of 36 aligned (rho_hat_s,tau_hat_s) pairs; denominator N-1",
+    "sigma_tau2_raw": "sample variance of tau_hat_s (N-1) minus mean_s[within-B sample variance(G_s)/10]",
+    "bootstrap": "20,000 draws: resample 36 states; independently resample all 15 A trajectories and 10 complete B records for every outer-state occurrence; two-sided 95% percentile CI"
+  },
+  "phase5a": {
+    "mu_rho": 0.04846931827645519,
+    "horizon_means": {
+      "deltaL1": 0.04815040450080677,
+      "deltaL2": 0.050203690413225574,
+      "deltaL3": 0.0470538599153332,
+      "deltaL4": 9.025069421640319e-05
+    },
+    "A34": -0.04696360922111681,
+    "A34_sign": "negative",
+    "frozen_rule_classification": "5A signature supported",
+    "frozen_rule_conditions": {
+      "mu_rho_CI_entirely_above_zero": true,
+      "A34_CI_entirely_below_zero": true,
+      "deltaL1_mean_positive": true,
+      "deltaL2_mean_positive": true,
+      "deltaL3_mean_positive": true
+    },
+    "intervals_95_percentile": {
+      "mu_rho": [
+        0.046131427886917806,
+        0.050900150152920716
+      ],
+      "deltaL1": [
+        0.04433033686385525,
+        0.05223866010203198
+      ],
+      "deltaL2": [
+        0.046043779926317856,
+        0.05445547198015107
+      ],
+      "deltaL3": [
+        0.04351884824952587,
+        0.050783662359226496
+      ],
+      "deltaL4": [
+        -0.0013578638559040357,
+        0.0015151950749506564
+      ],
+      "A34": [
+        -0.050983711435128067,
+        -0.04307340872724224
+      ]
+    }
+  },
+  "phase5b": {
+    "mean_final_effect": 0.0002677283129176079,
+    "mean_final_effect_interval_95_percentile": [
+      -0.0021670669561728154,
+      0.002663347596706996
+    ],
+    "tau_hat_across_state_sample_sd": 0.0058033860855339035,
+    "tau_hat_across_state_sample_variance": 3.367929005776853e-05,
+    "mean_within_state_B_variance": 0.0002457182554657594,
+    "mean_within_state_B_sd": 0.01567540288049272,
+    "sigma_tau2_raw_deconvolved": 9.107464511192588e-06,
+    "sigma_tau2_raw_interval_95_percentile": [
+      9.766482795548284e-06,
+      6.302776701027449e-05
+    ],
+    "sigma_tau_display": 0.0030178576028687286,
+    "practical_sd_reference": 0.005
+  },
+  "association": {
+    "covariance_primary_sample_N_minus_1": -6.950007438972617e-06,
+    "covariance_primary_interval_95_percentile": [
+      -2.5196934024589843e-05,
+      1.0202374944146862e-05
+    ],
+    "covariance_population_style_N": -6.7569516767789335e-06,
+    "pearson_r_companion": -0.23014236622627687,
+    "frozen_rule_classification": "no sufficiently precise evidence of the preregistered linear state-level association at the achieved Phase 5 precision"
+  },
+  "rng": {
+    "namespace": "ReflexML|Phase5|v1|bootstrap|primary",
+    "namespace_sha256": "94778b440d5865af8a3d6d482f184d7eb1c40cde8aaa65a3f3134ad2c289f770",
+    "seed": 10698172564239836591,
+    "bit_generator": "PCG64",
+    "numpy_version": "2.4.4",
+    "replicates": 20000,
+    "CI": "two-sided 95% percentile"
+  },
+  "sanity_checks": {
+    "36_aligned_primary_states": "PASS",
+    "15_A_per_rho": "PASS",
+    "10_B_per_tau": "PASS",
+    "A_B_disjoint": "PASS",
+    "no_B_in_rho": "PASS",
+    "no_A_in_tau": "PASS",
+    "no_nan_or_inf": "PASS",
+    "no_state_exclusion": "PASS",
+    "deltaL_sign_W_minus_N": "PASS",
+    "final_window_28_30": "PASS",
+    "frozen_bootstrap_seed": "PASS"
+  }
+}

@@ -1,0 +1,3 @@
+# Preserve frozen CSV bytes across platforms and Git newline settings.
+results/summaries/*.csv -text
+*.png binary

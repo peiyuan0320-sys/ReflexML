@@ -1,0 +1,476 @@
+{
+  "scope": "Source hashes bind internal originals; public hashes bind privacy-adapted copies. Embedded historical hashes are unchanged and do not certify these public copies. No new scientific analysis.",
+  "files": [
+    {
+      "public_path": "reflexml/stability.py",
+      "source_name": "stability.py",
+      "source_sha256": "b0b4336246670e073c4f5459fd4b8bc8e34cb36399cebb357f99467fb7754ce5",
+      "public_sha256": "b0b4336246670e073c4f5459fd4b8bc8e34cb36399cebb357f99467fb7754ce5",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/collapse_dynamics_replay.py",
+      "source_name": "collapse_dynamics_replay.py",
+      "source_sha256": "2ccc92cb367d663276323cf878ee256159020da37579076fd74eb0f9adbd06bc",
+      "public_sha256": "22dfbec7528c3a5a3097b4b7c7bdac12cea96052e6b8e4d6d8e0d7a9a2295d4e",
+      "adapted": true
+    },
+    {
+      "public_path": "reflexml/post_phase5_eiv.py",
+      "source_name": "post_phase5_eiv.py",
+      "source_sha256": "6e49f34470889743f1c44dec576d989f066a117875967ed2ef71a6c5c9e734a0",
+      "public_sha256": "9480749a5c542546dabe63e1542472bc22bcc3eea7d2879f4adf420081557ac3",
+      "adapted": true
+    },
+    {
+      "public_path": "reflexml/phase5.py",
+      "source_name": "phase5.py",
+      "source_sha256": "c4616f04e191f634dfa04cf22f760a49bb108ced0736f8a0b4f50d0a28dd49c0",
+      "public_sha256": "c4616f04e191f634dfa04cf22f760a49bb108ced0736f8a0b4f50d0a28dd49c0",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/config.py",
+      "source_name": "config.py",
+      "source_sha256": "e200d6d669d0e34aa430583d708b371483c995ad66d760e81d9494cb79f36c34",
+      "public_sha256": "e200d6d669d0e34aa430583d708b371483c995ad66d760e81d9494cb79f36c34",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/checkpoint.py",
+      "source_name": "checkpoint.py",
+      "source_sha256": "224b01de03174776b9db2dda63ba55b0f261a36074af41bc748c715be6ef15c8",
+      "public_sha256": "224b01de03174776b9db2dda63ba55b0f261a36074af41bc748c715be6ef15c8",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/reproducibility.py",
+      "source_name": "reproducibility.py",
+      "source_sha256": "bdc84b805a15baae12b00e0bf965ba0a0d0252793d8919485f6c1ed2ce2a3300",
+      "public_sha256": "bdc84b805a15baae12b00e0bf965ba0a0d0252793d8919485f6c1ed2ce2a3300",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/__init__.py",
+      "source_name": "__init__.py",
+      "source_sha256": "d81c30183a1964a598bec4569f9fa134ca9ee9e7754ed15800c6203141a71b6a",
+      "public_sha256": "d81c30183a1964a598bec4569f9fa134ca9ee9e7754ed15800c6203141a71b6a",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/features.py",
+      "source_name": "features.py",
+      "source_sha256": "2833cdefa233ada9fa1a96bc86ad25109383c62d5104f95f7ab17e88a70ea7f0",
+      "public_sha256": "2833cdefa233ada9fa1a96bc86ad25109383c62d5104f95f7ab17e88a70ea7f0",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/lr_switch_dynamics.py",
+      "source_name": "lr_switch_dynamics.py",
+      "source_sha256": "482c7cf72d3e92a674d6efbe3674864e5a9623f1265380d430524688121170c6",
+      "public_sha256": "a4d4de1b1b55f0c94aeadc76e40ccc2fdf8602858c98a9621153dab6e75423c4",
+      "adapted": true
+    },
+    {
+      "public_path": "reflexml/model.py",
+      "source_name": "model.py",
+      "source_sha256": "baa72f60243805559e13104464226f24777c9b70d6ccf3442dbee449f27b549c",
+      "public_sha256": "baa72f60243805559e13104464226f24777c9b70d6ccf3442dbee449f27b549c",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/wait_d.py",
+      "source_name": "wait_d.py",
+      "source_sha256": "4febb988d5d87170d2e818a25df6c1e643c98d0fec631a36864532a3e9996c04",
+      "public_sha256": "4febb988d5d87170d2e818a25df6c1e643c98d0fec631a36864532a3e9996c04",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/timing.py",
+      "source_name": "timing.py",
+      "source_sha256": "9a2517994c7039cfca8c8eb7fafe3a683e3fbdadfa29a5d575181181661e11e6",
+      "public_sha256": "9a2517994c7039cfca8c8eb7fafe3a683e3fbdadfa29a5d575181181661e11e6",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/collapse_external.py",
+      "source_name": "collapse_external.py",
+      "source_sha256": "f6468cba65c0ff802865163ce77cb53098a09bcb6cdc303cd9ffd22294028560",
+      "public_sha256": "f6468cba65c0ff802865163ce77cb53098a09bcb6cdc303cd9ffd22294028560",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/momentum_reset.py",
+      "source_name": "momentum_reset.py",
+      "source_sha256": "a8c7812765d706a12e6dd96168389e32599427f69b34aea823380e3d36791e76",
+      "public_sha256": "35612dcc0221f3305daa128fd358d7150d256ed6fd9600759b29f6a29f7dfbcf",
+      "adapted": true
+    },
+    {
+      "public_path": "reflexml/branching.py",
+      "source_name": "branching.py",
+      "source_sha256": "a497736dcda2f6b6d4e4e4732e586a6d2173d84fccd712c5353fb0402c77975a",
+      "public_sha256": "a497736dcda2f6b6d4e4e4732e586a6d2173d84fccd712c5353fb0402c77975a",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/mechanism_lr_switch.py",
+      "source_name": "mechanism_lr_switch.py",
+      "source_sha256": "d863c8eb5db64d6e301360880388aea1d898c833f34a24ee826fd60287c7b3e2",
+      "public_sha256": "d863c8eb5db64d6e301360880388aea1d898c833f34a24ee826fd60287c7b3e2",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/training.py",
+      "source_name": "training.py",
+      "source_sha256": "a47815407b11a89c0bfa44c90b465db6b162fc49857109ef50b86d771aed1bf6",
+      "public_sha256": "a47815407b11a89c0bfa44c90b465db6b162fc49857109ef50b86d771aed1bf6",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/data.py",
+      "source_name": "data.py",
+      "source_sha256": "31518db0978680c049cf3fc666601879670cb7a0437c9b3118586e88d840667c",
+      "public_sha256": "31518db0978680c049cf3fc666601879670cb7a0437c9b3118586e88d840667c",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/logging_utils.py",
+      "source_name": "logging_utils.py",
+      "source_sha256": "1e76af0d4f60acaf7a75c95897fafb9c6697e3167b7c598348caffe8baca7fb3",
+      "public_sha256": "1e76af0d4f60acaf7a75c95897fafb9c6697e3167b7c598348caffe8baca7fb3",
+      "adapted": false
+    },
+    {
+      "public_path": "reflexml/gradient_noise_attenuation.py",
+      "source_name": "gradient_noise_attenuation.py",
+      "source_sha256": "b80ea37db3c15cdbace9a7e931568edcb027dea2faa6cf51af1b411482a1915f",
+      "public_sha256": "4c4285b54c53a3568273db81b8add3ab305c21760e829a6b4443037794d1d583",
+      "adapted": true
+    },
+    {
+      "public_path": "tests/__init__.py",
+      "source_name": "__init__.py",
+      "source_sha256": "eb5f66a8bd6b970d6514f00abdd9ccddee5d05550431017e150d33123ddcd887",
+      "public_sha256": "eb5f66a8bd6b970d6514f00abdd9ccddee5d05550431017e150d33123ddcd887",
+      "adapted": false
+    },
+    {
+      "public_path": "tests/test_reproducibility.py",
+      "source_name": "test_reproducibility.py",
+      "source_sha256": "d0dbb2abfd721e148e3d1be5ef1cf246d428f65ed30beee373f3fc4d0c102852",
+      "public_sha256": "d0dbb2abfd721e148e3d1be5ef1cf246d428f65ed30beee373f3fc4d0c102852",
+      "adapted": false
+    },
+    {
+      "public_path": "tests/test_branching.py",
+      "source_name": "test_branching.py",
+      "source_sha256": "a9e835f015f2a8e68b04291424f1ea4f59dfbff5fa1fc2ef6443252daa32742b",
+      "public_sha256": "a9e835f015f2a8e68b04291424f1ea4f59dfbff5fa1fc2ef6443252daa32742b",
+      "adapted": false
+    },
+    {
+      "public_path": "tests/test_collapse_external.py",
+      "source_name": "test_collapse_external.py",
+      "source_sha256": "6483d1ac26e6dc63089f6553db5e620f1eeef9ea6027281b2c307dca63098e7b",
+      "public_sha256": "6483d1ac26e6dc63089f6553db5e620f1eeef9ea6027281b2c307dca63098e7b",
+      "adapted": false
+    },
+    {
+      "public_path": "tests/test_wait_d.py",
+      "source_name": "test_wait_d.py",
+      "source_sha256": "45a7f9f932be5547f6c2f86fb1d7e406a719e80bae9caf3e4f773dc10fc7333b",
+      "public_sha256": "45a7f9f932be5547f6c2f86fb1d7e406a719e80bae9caf3e4f773dc10fc7333b",
+      "adapted": false
+    },
+    {
+      "public_path": "tests/test_mechanism_lr_switch.py",
+      "source_name": "test_mechanism_lr_switch.py",
+      "source_sha256": "e027a57d04396027db8db59fc53ee366f5ea5b14679b024837607a799c1c098d",
+      "public_sha256": "df558342f220cc39650293c55d5eca9b7e6c38375444124f7eb402f4d7e57244",
+      "adapted": true
+    },
+    {
+      "public_path": "tests/test_momentum_reset.py",
+      "source_name": "test_momentum_reset.py",
+      "source_sha256": "cbb318262afc5a25317f1d3dda6676f8de66f5aba0fbda6cc948802fd03042fc",
+      "public_sha256": "eac41fbce5ca74620129108dab8e8bb84db4d349deffe128f8ce9ba962160059",
+      "adapted": true,
+      "adaptation_note": "Five internal-provenance-dependent tests explicitly skipped; no gate bypass or synthetic authorization."
+    },
+    {
+      "public_path": "tests/test_gradient_noise_attenuation.py",
+      "source_name": "test_gradient_noise_attenuation.py",
+      "source_sha256": "ea7e06f2780c5d8aad4928a7f17a1947f77ad05fdfef6a9b7006ad0ef2cef012",
+      "public_sha256": "3e064292d6740a3df62ca6f35b441f2cb9f382b435e87a713b972b0927db7b6b",
+      "adapted": true,
+      "adaptation_note": "Run independent synthetic kernel checks; omit authority-dependent class setup and explicitly skip four historical authority/data tests. No replacement registration supplied."
+    },
+    {
+      "public_path": "tests/test_collapse_dynamics_replay.py",
+      "source_name": "test_collapse_dynamics_replay.py",
+      "source_sha256": "bfa2e20000c8ea988f04720f1df590714b4dfbf046ae75ffd667ac30f2a57da7",
+      "public_sha256": "bfa2e20000c8ea988f04720f1df590714b4dfbf046ae75ffd667ac30f2a57da7",
+      "adapted": false
+    },
+    {
+      "public_path": "requirements.txt",
+      "source_name": "requirements.txt",
+      "source_sha256": "f62d359c13e18675fc129f9cf5759aad5f85a9546f12630c7a40b2615402dc48",
+      "public_sha256": "f62d359c13e18675fc129f9cf5759aad5f85a9546f12630c7a40b2615402dc48",
+      "adapted": false
+    },
+    {
+      "public_path": "PHASE5_DESIGN.md",
+      "source_name": "PHASE5_DESIGN.md",
+      "source_sha256": "8eff292a2e5027bec893d6cf43e327f961ae91bf390d9ed28a65a996a0799352",
+      "public_sha256": "24583dd3c720e2084a713782f80939084b9c0cbae5581d934403c10bb6f4e0f7",
+      "adapted": true
+    },
+    {
+      "public_path": "RESULTS_PHASE5.md",
+      "source_name": "RESULTS_PHASE5.md",
+      "source_sha256": "5db802ecafd736d83fbc6a808545f6998e7274e2fffdbbf59e89cea81644e06e",
+      "public_sha256": "3403c23a359c498ade06ee1a5a348a93638c4d4a5e8d3f3768e68e4f066f144f",
+      "adapted": true
+    },
+    {
+      "public_path": "MECHANISM_LR_SWITCH_PROTOCOL.md",
+      "source_name": "MECHANISM_LR_SWITCH_PROTOCOL.md",
+      "source_sha256": "2c5d58f45c5db454eb091023201a40d49cf0b75fd783c9a826a596fe8c217f48",
+      "public_sha256": "b053662a63efa60bbe87518cffe396ee8b241785f7455248da7bfc598b827edc",
+      "adapted": true
+    },
+    {
+      "public_path": "MECHANISM_LR_SWITCH_SECONDARY_CLARIFICATION.md",
+      "source_name": "MECHANISM_LR_SWITCH_SECONDARY_CLARIFICATION.md",
+      "source_sha256": "304d47745381e302ba18330b186dc414cbf71fccca6c6812eb9a3303de1c301a",
+      "public_sha256": "061353f18a4cf4b2fa639b77065089433aa9eb5e9b7acd6341eaf2fc0b8ebff6",
+      "adapted": true
+    },
+    {
+      "public_path": "MOMENTUM_RESET_PROTOCOL.md",
+      "source_name": "MOMENTUM_RESET_PROTOCOL.md",
+      "source_sha256": "5f6488f867c5a5663067ef5d5a85aea3aeca295e53260b42b9a21a61dac52f38",
+      "public_sha256": "45a9fb2bdd4df771dd9ac3908bbce7c82d2ce944fc51579c971dc0812b71d34b",
+      "adapted": true
+    },
+    {
+      "public_path": "MOMENTUM_RESET_PROTOCOL_FREEZE_RECORD.md",
+      "source_name": "MOMENTUM_RESET_PROTOCOL_FREEZE_RECORD.md",
+      "source_sha256": "8ce90fa4003c60640c622f966a67536412e273e99d6bf2fbd59ccb6ad57e3992",
+      "public_sha256": "57a0558bb3f03aeacf3176ca8b548d73673a939a17894dd3b5cdad954dd50bea",
+      "adapted": true
+    },
+    {
+      "public_path": "MOMENTUM_RESET_MECHANISM_CLOSURE.md",
+      "source_name": "MOMENTUM_RESET_MECHANISM_CLOSURE.md",
+      "source_sha256": "495fa3363d1631e5efdfea3dfee058bcad6dab4af313d9de64a9531666ad72fb",
+      "public_sha256": "c3f88265f885e1730db4257f461f74199d0371320bebaed9cae2b67da5f9fad8",
+      "adapted": true
+    },
+    {
+      "public_path": "GRADIENT_NOISE_ATTENUATION_PROTOCOL.md",
+      "source_name": "GRADIENT_NOISE_ATTENUATION_PROTOCOL.md",
+      "source_sha256": "14561bb89471edbbd76b7b528848468f73603db14c72bf758db3113e5f4a99f6",
+      "public_sha256": "4031a1b4de7ccabda82f8aa67f3462a0bde8ec7e94edbee5271729d8fa3317e1",
+      "adapted": true
+    },
+    {
+      "public_path": "GRADIENT_NOISE_ATTENUATION_PROTOCOL_FREEZE_RECORD.md",
+      "source_name": "GRADIENT_NOISE_ATTENUATION_PROTOCOL_FREEZE_RECORD.md",
+      "source_sha256": "baf4d435bed55a9afcf6df1d7f8308e0e8389e745343f420e65090d9bf265a22",
+      "public_sha256": "689df4e88fb45d6402d1d52967514fd3f552ca536b8411d23b4ef6dcd17f7738",
+      "adapted": true
+    },
+    {
+      "public_path": "LR_SWITCH_DYNAMICS_PROTOCOL.md",
+      "source_name": "LR_SWITCH_DYNAMICS_PROTOCOL.md",
+      "source_sha256": "89920f4fafef7ad3629e25f88c6f6a5c04284cb6d7196a259f031f33058040d4",
+      "public_sha256": "78a26a58478b4efe821f1ac83ad602c9a700f98ad7e190488617f061c34bb0f1",
+      "adapted": true
+    },
+    {
+      "public_path": "run_collapse_external.py",
+      "source_name": "run_collapse_external.py",
+      "source_sha256": "323d38ca2ec91009dc1a089f90450ca0a6a573bec811d1bc4497750691f8edd9",
+      "public_sha256": "323d38ca2ec91009dc1a089f90450ca0a6a573bec811d1bc4497750691f8edd9",
+      "adapted": false
+    },
+    {
+      "public_path": "run_wait_d.py",
+      "source_name": "run_wait_d.py",
+      "source_sha256": "f1e17d5fcc5ab9f8685a73d6b93a0934ac2075ffd513a211d592e2b32877957a",
+      "public_sha256": "f1e17d5fcc5ab9f8685a73d6b93a0934ac2075ffd513a211d592e2b32877957a",
+      "adapted": false
+    },
+    {
+      "public_path": "docs/FINAL_SCIENTIFIC_SNAPSHOT.md",
+      "source_name": "REFLEXML_FINAL_SCIENTIFIC_SNAPSHOT.md",
+      "source_sha256": "f5dbe5baf5ea6c4c8f91162621f975342fd1f5ad6345e540edbd135dff55d8cd",
+      "public_sha256": "9252aa34a50361f1b8970ae160e84464d6076b1e008df254443635942c1878c3",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/RESEARCH_POSTMORTEM.md",
+      "source_name": "REFLEXML_RESEARCH_POSTMORTEM.md",
+      "source_sha256": "c238880a186789be9083e657b9120aba102410bcdd84d40bcb1571367e689431",
+      "public_sha256": "bb29febae46886c8e9db26cbba47bdd98655d3d43b7c29f2e5ccefd6a2cc088e",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/NOVELTY_AND_STOPPING.md",
+      "source_name": "REFLEXML_GLOBAL_NOVELTY_AUDIT_2026-09-29.md",
+      "source_sha256": "68be2b8f1ea2c585cab9ba7ecdbaf4f185b4501c1738f5e0690ea052ab4164f4",
+      "public_sha256": "bc54b4f38c78b9c13df9170ce1c4fe9d102468c2071b0857dadcd40422b0f4ad",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/phase5_primary_results.json",
+      "source_name": "phase5_primary_results.json",
+      "source_sha256": "77188203f37c30489090c3dbdf08aa81825dd89056ce9ea5b1df5a2d690da416",
+      "public_sha256": "34eaaf33729ad2ac9367fa0b7b1e0d62c1e8651de7d2b16dd9baedab6b749404",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/phase5_state_estimates.csv",
+      "source_name": "phase5_state_estimates.csv",
+      "source_sha256": "d119d62176a780fe683ea7b38c630a21a4f0121e350420e7372fd536b1f0a056",
+      "public_sha256": "d119d62176a780fe683ea7b38c630a21a4f0121e350420e7372fd536b1f0a056",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/phase5_replica_estimates.csv",
+      "source_name": "phase5_replica_estimates.csv",
+      "source_sha256": "1868b85cf9ac9f8ac6c158a8af7fa057f92a46ad492bf6a30942b098cace34d1",
+      "public_sha256": "1868b85cf9ac9f8ac6c158a8af7fa057f92a46ad492bf6a30942b098cace34d1",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/lr_switch.json",
+      "source_name": "primary_analysis.json",
+      "source_sha256": "9b7d8a940c3b62590cad1793070c523ddb0c06c8592d2abe4d7c84378454e791",
+      "public_sha256": "6372b5672a6842132c05a799e94649dc5309f1f9ab1793578f25431b8ee5b32a",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/momentum_reset.json",
+      "source_name": "primary_analysis.json",
+      "source_sha256": "cc2f3fc59dc36c0fbf3a567e463542595e98766b6fc6f45bcda2a2a21e44bbab",
+      "public_sha256": "39b91e2529a27bd934b6331f9768a688f4b5ea0597809e74d9a98d0788561988",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/m4.json",
+      "source_name": "primary_analysis.json",
+      "source_sha256": "46f485320ed703d0a2651b7bf8ecce18eb515d0449eaf58415c99ec6d17ddb83",
+      "public_sha256": "b42160ff24dfa79526de9eacfb00207b5721e020ca43c277245b48d45fa80c36",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/evidence/M4_REPORT.md",
+      "source_name": "analysis_report.md",
+      "source_sha256": "dd08f856eb25cd97d7679d0e51d10c101ca578dc591f9114b80f693b4a37e5ef",
+      "public_sha256": "0812c2d1c77ce2ee8c9fdd234ebc84ae53a026a4c5843333edf8294cf1de4ebb",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/evidence/HISTORICAL_DYNAMICS.md",
+      "source_name": "scientific_report.md",
+      "source_sha256": "abb52e421cf6d14104b0dd6d6437069174f712010c8fed8abfc331a5d9ba21a4",
+      "public_sha256": "5680de9a049a26d5f275bcfb469107eee65a96b1c1f8578b9662937d89e9cfcf",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/historical_dynamics.csv",
+      "source_name": "aggregate_summary.csv",
+      "source_sha256": "e7c5a04a9fb69b1a43bb7ae537e66fdb764c0c91d04fb82a1e013fbfb32fa7b2",
+      "public_sha256": "e7c5a04a9fb69b1a43bb7ae537e66fdb764c0c91d04fb82a1e013fbfb32fa7b2",
+      "adapted": false
+    },
+    {
+      "public_path": "docs/evidence/LR_DYNAMICS.md",
+      "source_name": "scientific_report.md",
+      "source_sha256": "ddfb38abe0a1cf997cb9ea5b031be4a8d53aa92dc0a2db4dca8e7f2744e9ecb4",
+      "public_sha256": "08c9a68d0f34b8b90aef84fc2eb8919b996f0e575df7542622b83d08b1229002",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/lr_dynamics.csv",
+      "source_name": "primary_table.csv",
+      "source_sha256": "2dd2958d87036f0abe6c39e5fc1ae9934a8f759ff1d7534f803492b22496e67e",
+      "public_sha256": "2dd2958d87036f0abe6c39e5fc1ae9934a8f759ff1d7534f803492b22496e67e",
+      "adapted": false
+    },
+    {
+      "public_path": "docs/evidence/EIV_RESULTS.md",
+      "source_name": "POST_PHASE5_EIV_RESULTS.md",
+      "source_sha256": "ae72465634cad5c2bebe8a1d5b3f3ea009391abba23368bb354cb7ccfb2a5d02",
+      "public_sha256": "a78f8b1e7f63a2790dbe9b5863362922ce32ffbad6e9bd730f5c72d4f70e4633",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/eiv_decomposition.csv",
+      "source_name": "post_phase5_eiv_decomposition.csv",
+      "source_sha256": "6b133e3512417b77c2a2471821c486b3ef99e2cbd5a8a8fe6e79dcdee975ff3e",
+      "public_sha256": "6b133e3512417b77c2a2471821c486b3ef99e2cbd5a8a8fe6e79dcdee975ff3e",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/eiv_manifest.json",
+      "source_name": "post_phase5_eiv_manifest.json",
+      "source_sha256": "c598e2d64d6a2a19951cfa9310b9dc2e22150ec54dbcbf1dd280c2f8d0914020",
+      "public_sha256": "3615d1b2ac44e9263a27af867ee87066cb52ff3d7dc8492ccb532a569fe91afc",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/evidence/PRIOR_ART_2026-09-28.md",
+      "source_name": "novelty_audit.md",
+      "source_sha256": "b8292a9de8a16d57f42bd4ba0a1aacd9e69c9095f6a4155a9fae39dd975b49f4",
+      "public_sha256": "6eeea81b10d74df151b5a3cc8cc28afba21e764be6b855debdddcbed9cdc5b46",
+      "adapted": true
+    },
+    {
+      "public_path": "results/summaries/mnist_n6.json",
+      "source_name": "analysis.json",
+      "source_sha256": "cba02c79dc38cbd946edbc3bae3e18b993a6f45d647bda4edfd3a93f0d1c8371",
+      "public_sha256": "cba02c79dc38cbd946edbc3bae3e18b993a6f45d647bda4edfd3a93f0d1c8371",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/mnist_n12.json",
+      "source_name": "analysis.json",
+      "source_sha256": "99d39704009d0ab2b9bb73778ba3e64a400a52acbbc1389ad66e6bd43f19801f",
+      "public_sha256": "99d39704009d0ab2b9bb73778ba3e64a400a52acbbc1389ad66e6bd43f19801f",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/wait_d.json",
+      "source_name": "analysis.json",
+      "source_sha256": "89ccef7f9bd76caffbc15a1b62c64a753199c7cc63e00a7b5142083a4fa90ee9",
+      "public_sha256": "89ccef7f9bd76caffbc15a1b62c64a753199c7cc63e00a7b5142083a4fa90ee9",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/wait_d_validation.json",
+      "source_name": "validation.json",
+      "source_sha256": "94f3db0f750a78c0f8951ab154249d1ca3875492dfb59ff7564abdb77b4441e6",
+      "public_sha256": "94f3db0f750a78c0f8951ab154249d1ca3875492dfb59ff7564abdb77b4441e6",
+      "adapted": false
+    },
+    {
+      "public_path": "results/summaries/wait_d_manifest.json",
+      "source_name": "manifest.json",
+      "source_sha256": "4e5e985255ef893e8ca51d08e0605e48ac03a6d2fb51354763ca7df86807e03d",
+      "public_sha256": "f3228aaf310a9c883683c5bf3d8f76548bd5739fa997232ea5fc99e6899593f7",
+      "adapted": true
+    },
+    {
+      "public_path": "docs/evidence/PHASE5B_PRECISION_REVIEW.md",
+      "source_name": "PHASE5B_PRECISION_REVIEW.md",
+      "source_sha256": "bb1cd7b0766ce6eee65afc68af5d5b4c4069c273c2bc810b6762ed1fb37c5172",
+      "public_sha256": "ecb60a9b338b390f9fc99600d9152aba81d5482e052141468e8b686cb3b83aaa",
+      "adapted": true
+    }
+  ]
+}
