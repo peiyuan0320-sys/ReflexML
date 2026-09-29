@@ -1,31 +1,22 @@
 # ReflexML
 
-**学习率干预、训练动力学与排程重新统一后效应衰减的受控实证研究**
+学习率干预、训练动力学与排程重新统一后效应衰减的受控实证研究
 
-**项目状态：COMPLETE / FROZEN**  
-冻结日期：2026-09-29  
-作者：**Peiyuan Ma**
+状态：`COMPLETE / FROZEN` · 作者：Peiyuan Ma · 冻结日期：2026-09-29
 
 从相同训练状态出发，立即或延迟降低学习率，究竟会改变什么？ReflexML 观察到稳定的短期损失差距，以及排程重新统一后的明显衰减；机制对照提供了有限约束，外部复现和短期—长期关联仍有未解决的问题。最终，项目因论文级新颖性的边际收益不足而停止扩张，保留为一项完成的受控实证研究。
 
-## 一、项目简介
-
-ReflexML 从相同训练 checkpoint 分出多个分支，控制学习率干预时机与未来随机性，研究四个问题：
-
-- 短期学习率干预产生多大影响？
-- 干预效应如何随训练继续演化？
-- 两个分支的学习率排程重新统一后，已有差距如何衰减？
-- 短期响应是否包含关于后续效果的可靠信息？
+ReflexML 从相同训练 checkpoint 分出多个分支，控制学习率干预时机与未来随机性，研究短期干预产生多大影响、效应如何随训练继续演化，以及排程重新统一后已有差距如何衰减。另一个问题是：短期响应是否包含关于后续效果的可靠信息？
 
 项目不提出新优化器或新理论。主要实验采用固定的 Fashion-MNIST、MLP 和带 momentum 的 SGD 设置，并保留 MNIST 外部测试的部分复现结果。
 
-## 二、实验设计
+## 实验设计
 
-- **相同 checkpoint 分支（same-checkpoint branching）**：从相同模型参数、优化器状态及所需随机状态开始，改变预先指定的学习率处理。
-- **配对随机未来（paired stochastic futures）**：配对分支使用匹配的实际 minibatch 顺序，减少未来随机性对比较的干扰。
-- **不依赖结果选择的状态（outcome-independent states）**：Phase 5 的 36 个独立训练状态不根据后续干预效果筛选。
-- **冻结估计目标（frozen estimands）**：预先定义短期平均响应、最终效应和跨状态协方差；区分独立状态与同一状态下的重复未来。
-- **Now vs Wait-d**：Now 从 epoch15 将 LR 从 .10 降至 .05；Wait-d 保持 .10 共 d 个 epoch，随后降至 .05。Phase 5 使用 Wait3；后续 Wait-d 测试 d=1–4。
+相同 checkpoint 分支（same-checkpoint branching）从相同模型参数、优化器状态及所需随机状态开始，改变预先指定的学习率处理。配对随机未来（paired stochastic futures）则让配对分支使用匹配的实际 minibatch 顺序，减少未来随机性对比较的干扰。
+
+Phase 5 的 36 个独立训练状态不根据后续干预效果筛选，即 outcome-independent states。短期平均响应、最终效应和跨状态协方差均预先定义为冻结估计目标（frozen estimands），并区分独立状态与同一状态下的重复未来。
+
+Now 从 epoch15 将 LR 从 .10 降至 .05；Wait-d 保持 .10 共 d 个 epoch，随后降至 .05。Phase 5 使用 Wait3；后续 Wait-d 测试 d=1–4。
 
 ```text
                    相同完整 checkpoint S
@@ -42,7 +33,7 @@ ReflexML 从相同训练 checkpoint 分出多个分支，控制学习率干预�
 
 Phase 5 每个状态的 A 块有 15 个配对未来，用于测量短期响应；独立的 B 块有 10 个配对未来，用于测量最终效应。重复未来不增加独立状态数。详细定义见[实验设计导读](docs/EXPERIMENT_DESIGN.md)与[冻结协议](PHASE5_DESIGN.md)。
 
-## 三、主要结果
+## 主要结果
 
 下表中的正损失差值表示 Now 或 LR=.05 占优。结果均限定于相应的测试设置，数值按公开展示精度取舍。
 
@@ -53,8 +44,8 @@ Phase 5 每个状态的 A 块有 15 个配对未来，用于测量短期响应�
 | Momentum Reset | 清除继承自 S17 的 momentum 后，主要 LR 效应仍存在，差值约 0.04440 | 继承 momentum 单独不足以解释主要 LR 效应；主要交互仍未确定 |
 | m=4 | 改变梯度构造后，LR contrast 从约 0.04842 大幅减弱至 0.01173，但未消失 | m=4 是复合干预，同时改变梯度构造与批次暴露，不能解释为纯 gradient-noise removal |
 | Wait-d | d=1–4 均观察到排程重新统一后的明显衰减；Fashion-MNIST，N=12、K=2，冻结分类 GO | 在测试设置中并非 Wait3 特异；不构成 timing law，GO 不授权继续实验 |
-| MNIST | 仅观察到部分结构性衰减（partial structural attenuation）；最终 N=12、K=2，分类 **AMBIGUOUS** | 强衰减未得到复现，不能称为 strong replication |
-| Phase 5B | rho(S) 与 tau(S) 的跨状态协方差区间跨零；**INCONCLUSIVE / association precision insufficient** | 关联精度不足，不能据此声称无关联、负关联或不可预测 |
+| MNIST | 仅观察到部分结构性衰减（partial structural attenuation）；最终 N=12、K=2，分类 `AMBIGUOUS` | 强衰减未得到复现，不能称为 strong replication |
+| Phase 5B | rho(S) 与 tau(S) 的跨状态协方差区间跨零；`INCONCLUSIVE / association precision insufficient` | 关联精度不足，不能据此声称无关联、负关联或不可预测 |
 
 [精确冻结数值与结论边界](docs/FINAL_SCIENTIFIC_SNAPSHOT.md) · [已保存的结果摘要](results/README.md)
 
@@ -62,34 +53,25 @@ Phase 5 每个状态的 A 块有 15 个配对未来，用于测量短期响应�
 
 验证损失差 Wait3−Now；N=36、K_A=15。误差条为已保存的逐点 95% 区间，正值表示 Now 占优。h4 位于排程重新统一之后；图中接近零不代表严格零效应。
 
-## 四、项目不支持哪些结论
+## 结论边界
 
-ReflexML **没有证明**：
+这些结果没有建立一般性的学习率排程新定律，也没有证明 training history 被完全遗忘或 Wait-d 存在单调 timing law。Momentum Reset 不能被解读为 momentum 无关，梯度构造对照也没有证明 gradient noise 是主要或唯一机制。
 
-- 一般性的学习率排程新定律；
-- training history 被完全遗忘；
-- momentum 无关；
-- gradient noise 是主要或唯一机制；
-- Wait-d 存在单调 timing law；
-- rho(S) 可以可靠预测 tau(S)；
-- rho(S) 与 tau(S) 没有关系；
-- Fashion-MNIST 与 MNIST 的差异由数据集身份本身导致。
+跨状态关联的精度不足，尚不能证明 rho(S) 可以可靠预测 tau(S)，也不能据此断定二者没有关系。现有结果也没有证明 Fashion-MNIST 与 MNIST 的差异由数据集身份本身导致。
 
-同样，项目没有建立唯一机制或新的因果推断方法。阴性、不确定和未完全复现的结果都是研究记录的一部分。
+项目没有建立唯一机制或新的因果推断方法。阴性、不确定和未完全复现的结果都是研究记录的一部分。
 
-## 五、为什么项目最终停止扩张
+## 为什么停止扩张
 
 实验结果本身具有较高可重复性，也产生了若干有信息量的机制约束。但经过多轮对抗性文献审查，现有结果与已有 learning-rate transition、trajectory contraction、training dynamics 等研究之间的剩余差异，不足以在可接受边际成本下构成独立、足够新的论文级 scientific claim。
 
-最终新颖性判断：**NONE — NO DEFENSIBLE PAPER POINT AT ACCEPTABLE MARGINAL COST**。项目定位：**ONLY AS A REPLICATION / CONTROLLED EMPIRICAL STUDY**。
+最终新颖性判断：`NONE — NO DEFENSIBLE PAPER POINT AT ACCEPTABLE MARGINAL COST`。项目定位：`ONLY AS A REPLICATION / CONTROLLED EMPIRICAL STUDY`。
 
-最终决定：**FREEZE AND WRITE UP AS A CONTROLLED STUDY**。这是一项保留已有证据、明确贡献上限的停止决策，不再通过追加实验寻找更强的论文主张。
-
-## 六、研究价值
+最终决定：`FREEZE AND WRITE UP AS A CONTROLLED STUDY`。这是一项保留已有证据、明确贡献上限的停止决策，不再通过追加实验寻找更强的论文主张。
 
 项目保留的价值在于受控实验设计、配对随机未来、冻结协议、精确重放（exact replay）、外部复现尝试、阴性与不确定结果的保存，以及明确的停止决策和可检查的研究流程。这些是研究实践与工程资产，不作为新的 methodology contribution。
 
-## 七、仓库结构
+## 仓库结构
 
 | 位置 | 内容 |
 | --- | --- |
@@ -101,7 +83,7 @@ ReflexML **没有证明**：
 | `results/figures/` | 三张基于已保存结果的说明图 |
 | `reproduce/` | 可运行的验证命令与完整复现的限制 |
 
-## 八、复现说明
+## 复现说明
 
 ### 轻量级验证
 
@@ -111,7 +93,7 @@ ReflexML **没有证明**：
 
 完整复现部分实验需要未包含在公开仓库中的原始 checkpoints / raw artifacts，以及配对顺序记录、来源记录和原始运行环境。公开仓库不是完全 self-contained 的精确重放归档；涉及未公开执行基础设施的生产路径不受支持。保留图表仅呈现已有冻结数值。
 
-## 九、核心文档
+## 核心文档
 
 核心科学文档暂保留英文，避免产生重复且可能分歧的翻译版本。
 
