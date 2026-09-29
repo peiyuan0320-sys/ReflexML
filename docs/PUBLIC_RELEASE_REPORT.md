@@ -1,4 +1,13 @@
-# Local public-release candidate — 2026-09-29
+> Publication status update — 2026-09-29
+>
+> The reviewed public-release candidate described below has now been published to GitHub.
+> Repository: `peiyuan0320-sys/ReflexML`
+> Default branch: `main`
+> Current scientific status remains `COMPLETE / FROZEN`.
+>
+> The remainder of this document is preserved as the pre-publication validation record. Statements such as `DO NOT PUSH`, “no remote was created,” and “human final review remains required” describe the repository state at the time that validation was performed.
+
+# Pre-publication validation record — 2026-09-29
 
 ## Public-release status
 
