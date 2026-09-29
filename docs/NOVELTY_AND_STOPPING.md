@@ -4,7 +4,9 @@
 
 ## Provenance and scope
 
-This document records the final conversation-originated global salvage-audit decision. No standalone detailed final global audit was available locally. The authoritative final snapshot and postmortem preserve that decision. The retained 2026-09-28 narrow audit is earlier evidence; its continuation recommendation is superseded. This note adds no literature search, experiment or scientific analysis and does not represent the narrow audit as the final global audit.
+This document records the final project-level global salvage-audit decision adopted at the ReflexML freeze. A standalone detailed final global-audit report was not preserved as a repository artifact; the authoritative final snapshot and research postmortem preserve the resulting project-level decision.
+
+The earlier narrow novelty audit remains historical evidence, but any recommendation to continue experimentation from that earlier stage is superseded by the final freeze. This document adds no new literature search, experiment, or scientific analysis.
 
 ## Global verdict
 
