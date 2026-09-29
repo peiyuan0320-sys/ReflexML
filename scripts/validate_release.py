@@ -8,6 +8,30 @@ import sys
 ROOT=Path(__file__).resolve().parents[1]
 S=ROOT/'results/summaries'
 
+def readme_claim_checks(readme):
+    """Check the retained scientific limits independently of Markdown emphasis."""
+    text=readme.replace('**', '').replace('`', '')
+    rows={line.split('|')[1].strip(): line for line in text.splitlines()
+          if line.startswith('|') and len(line.split('|')) >= 5}
+    def contains(label, *clauses):
+        row=rows.get(label, '')
+        return all(clause in row for clause in clauses)
+    return {
+        'Phase 5B claim ceiling': contains('Phase 5B',
+            'INCONCLUSIVE', 'association precision insufficient',
+            '不能据此声称无关联、负关联或不可预测'),
+        'MNIST claim ceiling': contains('MNIST', 'AMBIGUOUS',
+            '强衰减未得到复现，不能称为 strong replication'),
+        'Momentum Reset claim ceiling': contains('Momentum Reset',
+            '继承 momentum 单独不足以解释主要 LR 效应', '主要交互仍未确定')
+            and 'Momentum Reset 不能被解读为 momentum 无关' in text,
+        'm=4 claim ceiling': contains('m=4', 'm=4 是复合干预',
+            '不能解释为纯 gradient-noise removal'),
+        'Wait-d claim ceiling': contains('Wait-d',
+            '不构成 timing law', 'GO 不授权继续实验'),
+    }
+
+
 def main():
     errors=[]
     manifest=json.loads((ROOT/'results/SOURCE_MANIFEST.json').read_text())
@@ -33,7 +57,18 @@ def main():
     wd=load('wait_d.json')
     checks['Wait-d']=wd['classification']=='GO' and set(wd['delays'])=={'1','2','3','4'} and all(len(v['P_i'])==12 for v in wd['delays'].values()) and values_present([v[k] for v in wd['delays'].values() for k in ['P','Q','C']])
     stop=(ROOT/'docs/NOVELTY_AND_STOPPING.md').read_text()
-    checks['final novelty']=all(x in stop for x in ['NONE — NO DEFENSIBLE PAPER POINT AT ACCEPTABLE MARGINAL COST','ONLY AS A REPLICATION / CONTROLLED EMPIRICAL STUDY','FREEZE AND WRITE UP AS A CONTROLLED STUDY','conversation-originated'])
+    readme=(ROOT/'README.md').read_text()
+    checks.update(readme_claim_checks(readme))
+    # The final verdict is scientific; the missing detailed audit is a provenance limit.
+    # Neither depends on the superseded conversation-workflow wording.
+    verdicts=['NONE — NO DEFENSIBLE PAPER POINT AT ACCEPTABLE MARGINAL COST',
+              'ONLY AS A REPLICATION / CONTROLLED EMPIRICAL STUDY',
+              'FREEZE AND WRITE UP AS A CONTROLLED STUDY']
+    checks['final novelty']=all(x in stop and x in readme for x in verdicts)
+    checks['novelty provenance']=all(x in stop for x in [
+        'A standalone detailed final global-audit report was not preserved as a repository artifact',
+        'any recommendation to continue experimentation from that earlier stage is superseded by the final freeze',
+        'This document adds no new literature search, experiment, or scientific analysis'])
     for name,ok in checks.items():
         print(name+': '+('PASS' if ok else 'FAIL'))
         if not ok:errors.append('scientific transcription: '+name)
